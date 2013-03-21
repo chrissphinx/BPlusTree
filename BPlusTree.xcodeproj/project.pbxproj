@@ -31,6 +31,7 @@
 		A98643CB16FAC4D200A523FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A98643CE16FAC4D200A523FC /* BPlusTree-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BPlusTree-Prefix.pch"; sourceTree = "<group>"; };
 		A98643CF16FAC4D200A523FC /* BPlusTree.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BPlusTree.1; sourceTree = "<group>"; };
+		A98643D816FAC5E400A523FC /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +74,7 @@
 		A98643CA16FAC4D200A523FC /* BPlusTree */ = {
 			isa = PBXGroup;
 			children = (
+				A98643D816FAC5E400A523FC /* main.h */,
 				A98643CB16FAC4D200A523FC /* main.m */,
 				A98643CF16FAC4D200A523FC /* BPlusTree.1 */,
 				A98643CD16FAC4D200A523FC /* Supporting Files */,
