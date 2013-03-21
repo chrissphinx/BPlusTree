@@ -5,20 +5,20 @@ int main(int argc, const char* argv[])
 {
     @autoreleasepool
     {
-        NSString* index = [NSHomeDirectory() stringByAppendingString:@"/Documents/BPlusTree/AsciiCodeIndex.txt"];
-        NSString* binary = [NSHomeDirectory() stringByAppendingString:@"/Documents/BPlusTree/BinaryCodeIndex.bin"];
-        FILE* file = fopen([index UTF8String], "r");
+        NSString* txtPath = [NSHomeDirectory() stringByAppendingString:@"/Documents/BPlusTree/AsciiCodeIndex.txt"];
+        NSString* binPath = [NSHomeDirectory() stringByAppendingString:@"/Documents/BPlusTree/BinaryCodeIndex.bin"];
+        FILE* txtFile = fopen([txtPath UTF8String], "r");
         
-        while(!feof(file)) {
-            NSString* line = readLineAsNSString(file);
-            NSArray* data = [
-                [line componentsSeparatedByCharactersInSet:
+        while(!feof(txtFile)) {
+            NSString* lineRead = readLineAsNSString(txtFile);
+            NSArray* dataArray = [
+                [lineRead componentsSeparatedByCharactersInSet:
                 [NSCharacterSet characterSetWithCharactersInString:@" \n\r"]]
                 filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"length > 0"]
             ];
             
-            if([data isNotEqualTo:@[]]) {
-                switch ([[data objectAtIndex:0] characterAtIndex:0]) {
+            if([dataArray isNotEqualTo:@[]]) {
+                switch ([[dataArray objectAtIndex:0] characterAtIndex:0]) {
                     case 'N':
                         // NODE
                         break;
@@ -27,11 +27,11 @@ int main(int argc, const char* argv[])
                         break;
                     default:
                         // HEADER
-                        [aggregateHeader(data) writeToFile:binary atomically:NO];
+                        [aggregateHeader(dataArray) writeToFile:binPath atomically:NO];
                         break;
                 }
             }
         }
-        fclose(file);
+        fclose(txtFile);
     }
 }

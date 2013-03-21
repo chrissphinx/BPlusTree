@@ -1,27 +1,27 @@
 NSData* aggregateHeader(NSArray* a) {
     NSMutableData* data = [NSMutableData new];
-    short number;
+    short n;
     
     for (int i = 0; i < [a count]; i++) {
-        number = CFSwapInt16HostToBig([[a objectAtIndex:i] intValue]);
-        [data appendBytes:&number length:2];
+        n = CFSwapInt16HostToBig([[a objectAtIndex:i] intValue]);
+        [data appendBytes:&n length:2];
     }
     
     return data;
 }
 
-NSString* readLineAsNSString(FILE* file)
+NSString* readLineAsNSString(FILE* f)
 {
-    char buffer[256];
-    NSMutableString* result = [NSMutableString new];
+    char b[256];
+    NSMutableString* line = [NSMutableString new];
     
-    int charsRead;
+    int r;
     do {
-        if(fscanf(file, "%256[^\r]%n%*c", buffer, &charsRead) == 1)
-            [result appendFormat:@"%s", buffer];
+        if(fscanf(f, "%256[^\r]%n%*c", b, &r) == 1)
+            [line appendFormat:@"%s", b];
         else
             break;
-    } while(charsRead == 256);
+    } while(r == 256);
     
-    return (NSString*)result;
+    return line;
 }
