@@ -4,15 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BPlusTree.xcscheme</key>
+		<key>TempSetup.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TempUserApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>A98643C416FAC4D200A523FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9D3D80F16FCE619007018BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
