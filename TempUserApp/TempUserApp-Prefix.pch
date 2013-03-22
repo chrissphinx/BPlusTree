@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'TempUserApp' target in the 'TempUserApp' project
+// Prefix header for all source files of the 'TempUserApp' target in the 'BPlusTree' project
 //
 
 #ifdef __OBJC__

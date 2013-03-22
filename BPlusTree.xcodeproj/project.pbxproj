@@ -12,7 +12,8 @@
 		A98643D016FAC4D200A523FC /* TempSetup.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A98643CF16FAC4D200A523FC /* TempSetup.1 */; };
 		A9D3D81116FCE619007018BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98643C816FAC4D200A523FC /* Foundation.framework */; };
 		A9D3D81816FCE619007018BB /* TempUserApp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9D3D81716FCE619007018BB /* TempUserApp.1 */; };
-		A9D3D81C16FCE647007018BB /* TempUserApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3D80B16FCE5D7007018BB /* TempUserApp.m */; };
+		A9D3D82316FCFA28007018BB /* CMCodeIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3D82216FCFA28007018BB /* CMCodeIndex.m */; };
+		A9D3D82516FCFA60007018BB /* TempUserApp.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3D82416FCFA60007018BB /* TempUserApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,17 +40,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A98643C516FAC4D200A523FC /* BPlusTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BPlusTree; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98643C516FAC4D200A523FC /* TempSetupProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TempSetupProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98643C816FAC4D200A523FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A98643CB16FAC4D200A523FC /* TempSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempSetup.m; sourceTree = "<group>"; };
-		A98643CE16FAC4D200A523FC /* BPlusTree-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BPlusTree-Prefix.pch"; sourceTree = "<group>"; };
+		A98643CE16FAC4D200A523FC /* TempSetup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TempSetup-Prefix.pch"; sourceTree = "<group>"; };
 		A98643CF16FAC4D200A523FC /* TempSetup.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TempSetup.1; sourceTree = "<group>"; };
-		A98643D816FAC5E400A523FC /* TempSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempSetup.h; sourceTree = "<group>"; };
-		A9D3D80A16FCE5D7007018BB /* TempUserApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempUserApp.h; sourceTree = SOURCE_ROOT; };
-		A9D3D80B16FCE5D7007018BB /* TempUserApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempUserApp.m; sourceTree = SOURCE_ROOT; };
 		A9D3D81016FCE619007018BB /* TempUserApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TempUserApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D3D81616FCE619007018BB /* TempUserApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TempUserApp-Prefix.pch"; sourceTree = "<group>"; };
 		A9D3D81716FCE619007018BB /* TempUserApp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TempUserApp.1; sourceTree = "<group>"; };
+		A9D3D82116FCFA28007018BB /* CMCodeIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCodeIndex.h; sourceTree = "<group>"; };
+		A9D3D82216FCFA28007018BB /* CMCodeIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCodeIndex.m; sourceTree = "<group>"; };
+		A9D3D82416FCFA60007018BB /* TempUserApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempUserApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,8 @@
 		A98643BC16FAC4D200A523FC = {
 			isa = PBXGroup;
 			children = (
+				A9D3D82116FCFA28007018BB /* CMCodeIndex.h */,
+				A9D3D82216FCFA28007018BB /* CMCodeIndex.m */,
 				A98643CA16FAC4D200A523FC /* TempSetup */,
 				A9D3D81216FCE619007018BB /* TempUserApp */,
 				A98643C716FAC4D200A523FC /* Frameworks */,
@@ -85,7 +88,7 @@
 		A98643C616FAC4D200A523FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A98643C516FAC4D200A523FC /* BPlusTree */,
+				A98643C516FAC4D200A523FC /* TempSetupProgram */,
 				A9D3D81016FCE619007018BB /* TempUserApp */,
 			);
 			name = Products;
@@ -102,7 +105,6 @@
 		A98643CA16FAC4D200A523FC /* TempSetup */ = {
 			isa = PBXGroup;
 			children = (
-				A98643D816FAC5E400A523FC /* TempSetup.h */,
 				A98643CB16FAC4D200A523FC /* TempSetup.m */,
 				A98643CF16FAC4D200A523FC /* TempSetup.1 */,
 				A98643CD16FAC4D200A523FC /* Supporting Files */,
@@ -114,7 +116,7 @@
 		A98643CD16FAC4D200A523FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A98643CE16FAC4D200A523FC /* BPlusTree-Prefix.pch */,
+				A98643CE16FAC4D200A523FC /* TempSetup-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,8 +124,7 @@
 		A9D3D81216FCE619007018BB /* TempUserApp */ = {
 			isa = PBXGroup;
 			children = (
-				A9D3D80A16FCE5D7007018BB /* TempUserApp.h */,
-				A9D3D80B16FCE5D7007018BB /* TempUserApp.m */,
+				A9D3D82416FCFA60007018BB /* TempUserApp.m */,
 				A9D3D81716FCE619007018BB /* TempUserApp.1 */,
 				A9D3D81516FCE619007018BB /* Supporting Files */,
 			);
@@ -155,7 +156,7 @@
 			);
 			name = TempSetupProgram;
 			productName = BPlusTree;
-			productReference = A98643C516FAC4D200A523FC /* BPlusTree */;
+			productReference = A98643C516FAC4D200A523FC /* TempSetupProgram */;
 			productType = "com.apple.product-type.tool";
 		};
 		A9D3D80F16FCE619007018BB /* TempUserApp */ = {
@@ -215,7 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9D3D81C16FCE647007018BB /* TempUserApp.m in Sources */,
+				A9D3D82316FCFA28007018BB /* CMCodeIndex.m in Sources */,
+				A9D3D82516FCFA60007018BB /* TempUserApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BPlusTree/BPlusTree-Prefix.pch";
+				GCC_PREFIX_HEADER = "BPlusTree/TempSetup-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -294,7 +296,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BPlusTree/BPlusTree-Prefix.pch";
+				GCC_PREFIX_HEADER = "BPlusTree/TempSetup-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
