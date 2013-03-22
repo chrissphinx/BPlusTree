@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A95CF10016FD185D00600E6D /* TempSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = A95CF0FF16FD185D00600E6D /* TempSetup.m */; };
 		A98643C916FAC4D200A523FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98643C816FAC4D200A523FC /* Foundation.framework */; };
-		A98643CC16FAC4D200A523FC /* TempSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = A98643CB16FAC4D200A523FC /* TempSetup.m */; };
-		A98643D016FAC4D200A523FC /* TempSetup.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A98643CF16FAC4D200A523FC /* TempSetup.1 */; };
 		A9D3D81116FCE619007018BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98643C816FAC4D200A523FC /* Foundation.framework */; };
 		A9D3D81816FCE619007018BB /* TempUserApp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A9D3D81716FCE619007018BB /* TempUserApp.1 */; };
 		A9D3D82316FCFA28007018BB /* CMCodeIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3D82216FCFA28007018BB /* CMCodeIndex.m */; };
@@ -23,7 +22,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				A98643D016FAC4D200A523FC /* TempSetup.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -40,11 +38,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A95CF0FD16FD185D00600E6D /* TempSetup-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempSetup-Prefix.pch"; sourceTree = "<group>"; };
+		A95CF0FE16FD185D00600E6D /* TempSetup.1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.man; path = TempSetup.1; sourceTree = "<group>"; };
+		A95CF0FF16FD185D00600E6D /* TempSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempSetup.m; sourceTree = "<group>"; };
 		A98643C516FAC4D200A523FC /* TempSetupProgram */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TempSetupProgram; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98643C816FAC4D200A523FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A98643CB16FAC4D200A523FC /* TempSetup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempSetup.m; sourceTree = "<group>"; };
-		A98643CE16FAC4D200A523FC /* TempSetup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TempSetup-Prefix.pch"; sourceTree = "<group>"; };
-		A98643CF16FAC4D200A523FC /* TempSetup.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TempSetup.1; sourceTree = "<group>"; };
 		A9D3D81016FCE619007018BB /* TempUserApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TempUserApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D3D81616FCE619007018BB /* TempUserApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TempUserApp-Prefix.pch"; sourceTree = "<group>"; };
 		A9D3D81716FCE619007018BB /* TempUserApp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TempUserApp.1; sourceTree = "<group>"; };
@@ -73,12 +71,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A95CF0FC16FD185D00600E6D /* TempSetup */ = {
+			isa = PBXGroup;
+			children = (
+				A95CF0FF16FD185D00600E6D /* TempSetup.m */,
+				A95CF0FE16FD185D00600E6D /* TempSetup.1 */,
+				A95CF10116FD188100600E6D /* Supporting Files */,
+			);
+			path = TempSetup;
+			sourceTree = "<group>";
+		};
+		A95CF10116FD188100600E6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A95CF0FD16FD185D00600E6D /* TempSetup-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A98643BC16FAC4D200A523FC = {
 			isa = PBXGroup;
 			children = (
 				A9D3D82116FCFA28007018BB /* CMCodeIndex.h */,
 				A9D3D82216FCFA28007018BB /* CMCodeIndex.m */,
-				A98643CA16FAC4D200A523FC /* TempSetup */,
+				A95CF0FC16FD185D00600E6D /* TempSetup */,
 				A9D3D81216FCE619007018BB /* TempUserApp */,
 				A98643C716FAC4D200A523FC /* Frameworks */,
 				A98643C616FAC4D200A523FC /* Products */,
@@ -100,25 +116,6 @@
 				A98643C816FAC4D200A523FC /* Foundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A98643CA16FAC4D200A523FC /* TempSetup */ = {
-			isa = PBXGroup;
-			children = (
-				A98643CB16FAC4D200A523FC /* TempSetup.m */,
-				A98643CF16FAC4D200A523FC /* TempSetup.1 */,
-				A98643CD16FAC4D200A523FC /* Supporting Files */,
-			);
-			name = TempSetup;
-			path = BPlusTree;
-			sourceTree = "<group>";
-		};
-		A98643CD16FAC4D200A523FC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A98643CE16FAC4D200A523FC /* TempSetup-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A9D3D81216FCE619007018BB /* TempUserApp */ = {
@@ -208,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A98643CC16FAC4D200A523FC /* TempSetup.m in Sources */,
+				A95CF10016FD185D00600E6D /* TempSetup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +284,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BPlusTree/TempSetup-Prefix.pch";
+				GCC_PREFIX_HEADER = "TempSetup/TempSetup-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -296,7 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BPlusTree/TempSetup-Prefix.pch";
+				GCC_PREFIX_HEADER = "TempSetup/TempSetup-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -347,6 +344,7 @@
 				A9D3D81B16FCE619007018BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
