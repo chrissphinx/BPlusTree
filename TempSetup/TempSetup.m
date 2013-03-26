@@ -14,7 +14,6 @@
 #import <Foundation/Foundation.h>
 
 // ----- PROTOTYPES -----------------------------------------/
-//NSData* aggregateNode(NSArray* a);
 NSData* aggregateLeafOrNode(NSArray* a);
 NSData* aggregateHeader(NSArray* a);
 NSString* readLineAsNSString(FILE* f);
@@ -94,36 +93,7 @@ int main(int argc, const char* argv[])
 
 // ----- FUNCTIONS ------------------------------------------/
 
-//  aggregateNode
-//
-//  loops through the given array, appending bytes
-//  to a mutable data object. Country codes are
-//  written in one large section and then the tree
-//  pointers. Swap endianness for readability
-
-//NSData* aggregateNode(NSArray* a)
-//{
-//    NSMutableData* data = [NSMutableData new];
-//    
-//    char c = [[a objectAtIndex:0] characterAtIndex:0];
-//    [data appendBytes:&c length:1];
-//    
-//    const char* o;
-//    for (int i = 1; i < [a count] - 1; i = i + 2) {
-//        o = [[a objectAtIndex:i] UTF8String];
-//        [data appendBytes:o length:3];
-//    }
-//    
-//    short p;
-//    for (int i = 2; i < [a count] - 1; i = i + 2) {
-//        p = CFSwapInt16HostToBig([[a objectAtIndex:i] intValue]);
-//        [data appendBytes:&p length:2];
-//    }
-//    
-//    return data;
-//}
-
-//  aggregateLeaf
+//  aggregateLeafOrNode
 //
 //  loops through the given array, appending bytes
 //  to a mutable data object. Writes next leaf pointer

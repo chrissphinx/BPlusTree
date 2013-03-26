@@ -1,8 +1,10 @@
 /*
  *  CMCodeIndex.h                           Colin MacCreery
  *
- *  Header for the Code Index.
- *
+ *  Header for the Code Index. Originally used @properties
+ *  but was unnessesary as TempUserApp.m does not need
+ *  to access any of that information. 
+ *  
  ************************************************************/
 
 
@@ -18,17 +20,16 @@ typedef struct {
 
 @interface CMCodeIndex : NSObject {
     header* h;
+    char _type;
+    short _next;
+    NSMutableArray* _codes;
+    NSMutableArray* _pointers;
     int headSize;
     int recSize;
     NSFileHandle* binHandle;
     int nodesRead;
     int comparisons;
 }
-
-@property char type;
-@property short next;
-@property (retain, nonatomic) NSMutableArray* codes;
-@property NSMutableArray* pointers;
 
 -(id)initWithFile:(NSString*)f;
 -(NSDictionary*)query:(NSString*)c;

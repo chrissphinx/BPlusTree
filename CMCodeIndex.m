@@ -1,7 +1,10 @@
 /*
  *  CMCodeIndex.m                           Colin MacCreery
  *
- *  Implementation for the Code Index.
+ *  Implementation for the Code Index. Stores a single node
+ *  from the binary file at a time. Is able to search for a
+ *  particular country code's DRP and list all codes
+ *  alphabetically.
  *
  ************************************************************/
 
@@ -9,12 +12,15 @@
 #import "CMCodeIndex.h"
 
 @implementation CMCodeIndex
-@synthesize type = _type;
-@synthesize next = _next;
-@synthesize codes = _codes;
-@synthesize pointers = _pointers;
 
 // ----- PUBLIC ---------------------------------------------/
+
+//  initWithFile
+//
+//  constructor for the object, opens the file passed
+//  to it and reads the header into a struct. Calculates
+//  the record size and the header size
+
 -(id)initWithFile:(NSString*)f {
     self = [super init];
     
@@ -34,10 +40,16 @@
     return self;
 }
 
+//  query
+//
+//  public query function. Begins the search
+//  for a particular country code at the root.
+//  Uses recursion
+
 -(NSDictionary*)query:(NSString*)c {
     nodesRead = 0;
     comparisons = 0;
-    NSNumber* ans = [self query:c atNode:h->r];
+    NSNumber* ans = [self query:c AtNode:h->r];
     NSNumber* nR = [NSNumber numberWithInt:nodesRead];
     NSNumber* comp = [NSNumber numberWithInt:comparisons];
 
@@ -49,6 +61,11 @@
     }
     return result;
 }
+
+//  list
+//
+//  aggregates a string containing the country
+//  codes listed alphabetically
 
 -(NSString*)list {
     NSMutableString* listing = [NSMutableString stringWithString:@""];
@@ -67,12 +84,24 @@
     return listing;
 }
 
+//  close
+//
+//  closes the binary file
+
 -(void)close {
     [binHandle closeFile];
 }
 
 // ----- PRIVATE --------------------------------------------/
--(NSNumber*)query:(NSString*)c atNode:(int)n {
+
+//  queryAtNode
+//
+//  recursive method for searching for a country code. Fails
+//  fast if it ever runs into an "^^^" entry and counts
+//  the number of nodes read as well as number of comparisons
+//  made
+
+-(NSNumber*)query:(NSString*)c AtNode:(int)n {
     nodesRead++;
     [self readNode:n];
     
@@ -80,7 +109,7 @@
         for(int i = 0; i < [_codes count]; i++) {
             comparisons++;
             if([[_codes objectAtIndex:i] isEqualToString:@"^^^"]) return nil;
-            if([c isLessThanOrEqualTo:[_codes objectAtIndex:i]]) return [self query:c atNode:[[_pointers objectAtIndex:i] intValue]];
+            if([c isLessThanOrEqualTo:[_codes objectAtIndex:i]]) return [self query:c AtNode:[[_pointers objectAtIndex:i] intValue]];
         }
     } else {
         for(int i = 0; i < [_codes count]; i++) {
@@ -91,6 +120,11 @@
     }
     return nil;
 }
+
+//  readNode
+//
+//  reads in a single node from the file specified
+//  by the record number
 
 -(void)readNode:(int)record {
     [binHandle seekToFileOffset:(headSize + (record - 1) * recSize)];

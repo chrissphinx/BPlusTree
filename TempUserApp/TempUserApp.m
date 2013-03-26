@@ -1,6 +1,12 @@
 /*
  *  TempUserApp.m                           Colin MacCreery
  *
+ *  FILES READ:     A4TransData.txt
+ *  FILES WRITTEN:  Log.txt
+ *
+ *  Reads A4TransData.txt line-by-line and then carries
+ *  out the specified transaction, logging the result.
+ *
  ************************************************************/
 
 
