@@ -1,3 +1,51 @@
 *** TempSetup program started
 *** TempSetup program completed
+*** TempUserApp program started
+
+QC WMU
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ZZZ
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC AAA
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ZWE
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC WSM
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC IDN
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC BOX
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC LKA
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ALB
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC NLD
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ECU
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC DMA
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC NOR
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC OMN
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC PAN
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC SVN
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC WSM
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ABW
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ALB
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC ALL
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+QC AGZ
+>> NO MATCH – (null) nodes read in – (null) key-comparisons done
+LC
+LISTING ALL CODES
+
+*** TempUserApp program completed (# transactions)
 

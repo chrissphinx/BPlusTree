@@ -17,11 +17,11 @@ typedef struct {
 } header;
 
 @interface CMCodeIndex : NSObject {
+    header* h;
     NSFileHandle* binHandle;
     NSDictionary* result;
 }
 
-@property header* header;
 @property char type;
 @property short next;
 @property (retain, nonatomic) NSMutableArray* codes;
@@ -29,6 +29,7 @@ typedef struct {
 
 -(id)initWithFile:(NSString*)f;
 -(NSDictionary*)query:(NSString*)c;
+-(NSString*)list;
 -(void)close;
 
 @end

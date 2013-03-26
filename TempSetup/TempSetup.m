@@ -83,7 +83,7 @@ int main(int argc, const char* argv[])
         
         // log a finishing message
         [[[NSString stringWithContentsOfFile:logPath encoding:NSUTF8StringEncoding error:nil]
-            stringByAppendingString:@"*** TempSetup program completed\n\n"]
+            stringByAppendingString:@"*** TempSetup program completed\n"]
                 writeToFile:logPath
                 atomically:NO
                 encoding:NSUTF8StringEncoding

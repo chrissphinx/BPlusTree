@@ -9,7 +9,6 @@
 #import "CMCodeIndex.h"
 
 @implementation CMCodeIndex
-@synthesize header = _header;
 @synthesize type = _type;
 @synthesize next = _next;
 @synthesize codes = _codes;
@@ -21,13 +20,14 @@
     
     binHandle = [NSFileHandle fileHandleForReadingAtPath:f];
         
-    header* head = malloc(sizeof(header));
-    head->m = CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] );
-    head->r = CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] );
-    head->e = CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] );
-    head->f = CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] );
-    head->k = CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] );
-    _header = head;
+    header head = {
+        CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] ),
+        CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] ),
+        CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] ),
+        CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] ),
+        CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] )
+    };
+    h = &head;
     
     return self;
 }
@@ -35,11 +35,15 @@
 -(NSDictionary*)query:(NSString*)c {
     result = [NSDictionary dictionaryWithObjects:@[@3, @5, @13] forKeys:@[@"pointer", @"nodes", @"comparisons"]];
     
-    return result;
+    return nil;
+}
+
+-(NSString*)list {
+    return @"LISTING ALL CODES\n\n";
 }
 
 -(void)close {
-    free(_header);
+    [binHandle closeFile];
 }
 
 // ----- PRIVATE --------------------------------------------/
@@ -48,8 +52,8 @@
     _type = *(char*)[[binHandle readDataOfLength:1] bytes];
     if(_type == 'L') _next = CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] );
     
-    _codes = [[NSMutableArray alloc] initWithCapacity:_header->m];
-    for (int i = 0; i < _header->m; i++) {
+    _codes = [[NSMutableArray alloc] initWithCapacity:h->m];
+    for (int i = 0; i < h->m; i++) {
         [_codes addObject: [
             [NSString alloc]
             initWithBytes:[[binHandle readDataOfLength:3] bytes]
@@ -57,8 +61,8 @@
         ];
     }
     
-    _pointers = [[NSMutableArray alloc] initWithCapacity:_header->m];
-    for (int i = 0; i < _header->m; i++) {
+    _pointers = [[NSMutableArray alloc] initWithCapacity:h->m];
+    for (int i = 0; i < h->m; i++) {
         [_pointers addObject: [
             NSNumber numberWithShort:
             CFSwapInt16BigToHost( *(short*)[[binHandle readDataOfLength:2] bytes] )]
