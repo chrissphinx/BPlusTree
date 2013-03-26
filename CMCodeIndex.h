@@ -18,8 +18,11 @@ typedef struct {
 
 @interface CMCodeIndex : NSObject {
     header* h;
+    int headSize;
+    int recSize;
     NSFileHandle* binHandle;
-    NSDictionary* result;
+    int nodesRead;
+    int comparisons;
 }
 
 @property char type;

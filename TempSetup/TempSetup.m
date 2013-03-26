@@ -14,8 +14,8 @@
 #import <Foundation/Foundation.h>
 
 // ----- PROTOTYPES -----------------------------------------/
-NSData* aggregateNode(NSArray* a);
-NSData* aggregateLeaf(NSArray* a);
+//NSData* aggregateNode(NSArray* a);
+NSData* aggregateLeafOrNode(NSArray* a);
 NSData* aggregateHeader(NSArray* a);
 NSString* readLineAsNSString(FILE* f);
 
@@ -65,11 +65,11 @@ int main(int argc, const char* argv[])
                 switch ([[dataArray objectAtIndex:0] characterAtIndex:0]) {
                     case 'N':
                         [binHandle seekToEndOfFile];
-                        [binHandle writeData:aggregateNode(dataArray)];
+                        [binHandle writeData:aggregateLeafOrNode(dataArray)];
                         break;
                     case 'L':
                         [binHandle seekToEndOfFile];
-                        [binHandle writeData:aggregateLeaf(dataArray)];
+                        [binHandle writeData:aggregateLeafOrNode(dataArray)];
                         break;
                     default:
                         [binHandle seekToEndOfFile];
@@ -101,27 +101,27 @@ int main(int argc, const char* argv[])
 //  written in one large section and then the tree
 //  pointers. Swap endianness for readability
 
-NSData* aggregateNode(NSArray* a)
-{
-    NSMutableData* data = [NSMutableData new];
-    
-    char c = [[a objectAtIndex:0] characterAtIndex:0];
-    [data appendBytes:&c length:1];
-    
-    const char* o;
-    for (int i = 1; i < [a count] - 1; i = i + 2) {
-        o = [[a objectAtIndex:i] UTF8String];
-        [data appendBytes:o length:3];
-    }
-    
-    short p;
-    for (int i = 2; i < [a count] - 1; i = i + 2) {
-        p = CFSwapInt16HostToBig([[a objectAtIndex:i] intValue]);
-        [data appendBytes:&p length:2];
-    }
-    
-    return data;
-}
+//NSData* aggregateNode(NSArray* a)
+//{
+//    NSMutableData* data = [NSMutableData new];
+//    
+//    char c = [[a objectAtIndex:0] characterAtIndex:0];
+//    [data appendBytes:&c length:1];
+//    
+//    const char* o;
+//    for (int i = 1; i < [a count] - 1; i = i + 2) {
+//        o = [[a objectAtIndex:i] UTF8String];
+//        [data appendBytes:o length:3];
+//    }
+//    
+//    short p;
+//    for (int i = 2; i < [a count] - 1; i = i + 2) {
+//        p = CFSwapInt16HostToBig([[a objectAtIndex:i] intValue]);
+//        [data appendBytes:&p length:2];
+//    }
+//    
+//    return data;
+//}
 
 //  aggregateLeaf
 //
@@ -130,7 +130,7 @@ NSData* aggregateNode(NSArray* a)
 //  as well as country codes and then record pointers.
 //  Swap endianness for readability
 
-NSData* aggregateLeaf(NSArray* a)
+NSData* aggregateLeafOrNode(NSArray* a)
 {
     NSMutableData* data = [NSMutableData new];
     

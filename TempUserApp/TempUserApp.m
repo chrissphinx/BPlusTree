@@ -28,6 +28,9 @@ int main(int argc, const char* argv[])
             encoding:NSUTF8StringEncoding
             error:NULL
          ];
+        
+        // for counting number of transactions
+        int count = 0;
 
         // create & initialize CMCodeIndex object with binary file
         CMCodeIndex* index = [[CMCodeIndex alloc] initWithFile:binPath];
@@ -50,14 +53,17 @@ int main(int argc, const char* argv[])
             // confirm the array is not empty
             if([queryArray isNotEqualTo:@[]])
             {
+                // increment transaction count
+                count++;
+
                 // if the transaction is a code query ...
                 if([[queryArray objectAtIndex:0] isEqualToString:@"QC"])
                 {
                     // echo the query
                     [[[NSString stringWithContentsOfFile:logPath encoding:NSUTF8StringEncoding error:nil]
                         stringByAppendingString: [
-                            NSString stringWithFormat:@"%@ %@\n", [queryArray objectAtIndex:0], [queryArray objectAtIndex:1]]
-                        ]
+                            NSString stringWithFormat:@"%@ %@\n", [queryArray objectAtIndex:0], [queryArray objectAtIndex:1]
+                        ]]
                         writeToFile:logPath
                         atomically:NO
                         encoding:NSUTF8StringEncoding
@@ -65,14 +71,14 @@ int main(int argc, const char* argv[])
                     ];
 
                     // send query message to CMCodeIndex object
-                    NSDictionary* result = [index query:@""];
+                    NSDictionary* result = [index query:[queryArray objectAtIndex:1]];
  
                     // build output string for appending to log file
                     NSString* output;
-                    if([result isNotEqualTo:nil]) {
+                    if([[result objectForKey:@"pointer" ] isNotEqualTo:nil]) {
                         output = [
-                            NSString stringWithFormat:@">> DRP: %@ – %@ nodes read in – %@ key-comparisons done\n",
-                            [result objectForKey:@"pointer"],
+                            NSString stringWithFormat:@">> DRP: %03d – %@ nodes read in – %@ key-comparisons done\n",
+                            [[result objectForKey:@"pointer"] intValue],
                             [result objectForKey:@"nodes"],
                             [result objectForKey:@"comparisons"]
                         ];
@@ -113,7 +119,9 @@ int main(int argc, const char* argv[])
         
         // log a finishing message
         [[[NSString stringWithContentsOfFile:logPath encoding:NSUTF8StringEncoding error:nil]
-            stringByAppendingString:@"*** TempUserApp program completed (# transactions)\n\n"]
+            stringByAppendingString: [
+                NSString stringWithFormat:@"*** TempUserApp program completed (%d transactions)", count
+            ]]
             writeToFile:logPath
             atomically:NO
             encoding:NSUTF8StringEncoding

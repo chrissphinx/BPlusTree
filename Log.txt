@@ -3,49 +3,281 @@
 *** TempUserApp program started
 
 QC WMU
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> NO MATCH – 4 nodes read in – 19 key-comparisons done
 QC ZZZ
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> NO MATCH – 1 nodes read in – 3 key-comparisons done
 QC AAA
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> NO MATCH – 4 nodes read in – 9 key-comparisons done
 QC ZWE
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 161 – 4 nodes read in – 18 key-comparisons done
 QC WSM
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 121 – 4 nodes read in – 13 key-comparisons done
 QC IDN
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 071 – 4 nodes read in – 17 key-comparisons done
 QC BOX
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> NO MATCH – 4 nodes read in – 9 key-comparisons done
 QC LKA
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 082 – 4 nodes read in – 14 key-comparisons done
 QC ALB
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 053 – 4 nodes read in – 8 key-comparisons done
 QC NLD
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 014 – 4 nodes read in – 16 key-comparisons done
 QC ECU
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 029 – 4 nodes read in – 13 key-comparisons done
 QC DMA
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 155 – 4 nodes read in – 9 key-comparisons done
 QC NOR
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 047 – 4 nodes read in – 7 key-comparisons done
 QC OMN
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 084 – 4 nodes read in – 11 key-comparisons done
 QC PAN
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 046 – 4 nodes read in – 13 key-comparisons done
 QC SVN
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 186 – 4 nodes read in – 12 key-comparisons done
 QC WSM
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 121 – 4 nodes read in – 13 key-comparisons done
 QC ABW
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 211 – 4 nodes read in – 4 key-comparisons done
 QC ALB
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> DRP: 053 – 4 nodes read in – 8 key-comparisons done
 QC ALL
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> NO MATCH – 4 nodes read in – 11 key-comparisons done
 QC AGZ
->> NO MATCH – (null) nodes read in – (null) key-comparisons done
+>> NO MATCH – 4 nodes read in – 9 key-comparisons done
 LC
-LISTING ALL CODES
+ABW 211
+AFG  60
+AGO 146
+AIA 210
+ALB  53
+AND  10
+ANT 218
+ARE 142
+ARG  24
+ARM 170
+ASM 224
+ATA 198
+ATF 200
+ATG 163
+AUS  44
+AUT  56
+AZE 171
+BDI 116
+BEL  32
+BEN  94
+BFA  95
+BGD 140
+BGR  50
+BHR 139
+BHS 143
+BIH 188
+BLR 178
+BLZ 164
+BMU 212
+BOL  30
+BRA  28
+BRB 131
+BRN 166
+BTN  52
+BVT 199
+BWA 129
+CAF  97
+CAN  42
+CCK 226
+CHE  13
+CHL  20
+CHN   1
+CIV 101
+CMR  96
+COD 100
+COG  99
+COK 227
+COL  21
+COM 148
+CPV 147
+CRI  25
+CUB  45
+CXR 225
+CYM 213
+CYP 111
+CZE 190
+DEU  87
+DJI 154
+DMA 155
+DNK   4
+DOM  37
+DZA 115
+ECU  29
+EGY  63
+ERI 189
+ESH 197
+ESP  12
+EST 180
+ETH   2
+FIN  54
+FJI 137
+FLK 238
+FRA   6
+FRO 207
+FSM 169
+GAB 102
+GBR   8
+GEO 172
+GHA  91
+GIB 208
+GIN  93
+GLP 215
+GMB 126
+GNB 144
+GNQ 133
+GRC  33
+GRD 145
+GRL 214
+GTM  26
+GUF 239
+GUM 229
+GUY 132
+HKG 204
+HMD 201
+HND  34
+HRV 179
+HTI  17
+HUN  57
+IDN  71
+IND  76
+IOT 193
+IRL  62
+IRN  48
+IRQ  66
+ISL  70
+ISR  78
+ITA  39
+JAM 119
+JOR  74
+JPN   3
+KAZ 173
+KEN 122
+KGZ 174
+KHM  85
+KIR 160
+KNA 165
+KOR  81
+KWT 114
+LAO  86
+LBN  68
+LBR  38
+LBY  83
+LCA 158
+LIE  18
+LKA  82
+LSO 130
+LTU 182
+LUX  41
+LVA 181
+MAC 205
+MAR  88
+MCO  40
+MDA 184
+MDG 103
+MDV 127
+MEX  19
+MHL 168
+MKD 183
+MLI 104
+MLT 125
+MMR  79
+MNG  61
+MNP 233
+MOZ 149
+MRT 105
+MSR 217
+MTQ 216
+MUS 134
+MWI 123
+MYS  92
+MYT 194
+NAM 167
+NCL 230
+NER 106
+NFK 232
+NGA 107
+NIC  35
+NIU 231
+NLD  14
+NOR  47
+NPL  15
+NRU 136
+NZL  49
+OMN  84
+PAK  77
+PAN  46
+PCN 234
+PER  27
+PHL  75
+PLW 192
+PNG 151
+POL  58
+PRI 219
+PRK  80
+PRT   9
+PRY  22
+PSE 206
+PYF 228
+QAT 141
+REU 195
+ROM  43
+RUS 185
+RWA 117
+SAU  67
+SDN  89
+SEN 108
+SGP 128
+SGS 202
+SHN 196
+SJM 209
+SLB 156
+SLE 112
+SLV  36
+SMR   7
+SOM 109
+SPM 220
+STP 150
+SUR 152
+SVK 191
+SVN 186
+SWE   5
+SWZ 135
+SYC 153
+SYR  69
+TCA 221
+TCD  98
+TGO 110
+THA  11
+TJK 175
+TKL 235
+TKM 176
+TMP 203
+TON 138
+TTO 120
+TUN  90
+TUR  64
+TUV 157
+TWN  72
+TZA 113
+UGA 118
+UKR 187
+UMI 236
+URY  31
+USA  16
+UZB 177
+VAT  65
+VCT 159
+VEN  23
+VGB 222
+VIR 223
+VNM  73
+VUT 162
+WLF 237
++++++ END OF DATA +++++ (239 countries)
 
-*** TempUserApp program completed (# transactions)
-
+*** TempUserApp program completed (22 transactions)
